@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main .card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    margin-top: 3rem;
+    transition: all ease 1s;
+}
+
+.main .card img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover;/ */
+}
+
+h1 {
+    position: absolute;
+    /* top: 0; */
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 3rem;
+    bottom: 50%;
+    color: white;
+}

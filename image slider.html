@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Slider</title>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <img src="brooke-cagle-g1Kr4Ozfoac-unsplash.jpg" alt="">
+            <h1>Image slider</h1>
+        </div>
+        <div class="card">
+            <img src="helena-lopes-UZe35tk5UoA-unsplash.jpg" alt="">
+            <h1>Image slider</h1>
+        </div>
+        <div class="card">
+            <img src="jason-goodman-Oalh2MojUuk-unsplash.jpg" alt="">
+            <h1>Image slider</h1>
+        </div>
+        <div class="card">
+            <img src="jefferson-santos-9SoCnyQmkzI-unsplash.jpg" alt="">
+            <h1>Image slider</h1>
+        </div>
+
+    </div>
+
+
+    <script>
+        let cards = document.querySelectorAll(".card")
+        // Image index============
+        let counter = 0;
+        // Use to slide images===============
+
+        cards.forEach(function (slide, index) {
+            slide.style.left = `${index * 100}%`
+        })
+
+        // Use to change counter value============
+        function myfun() {
+            cards.forEach(function (curentvalu) {
+                curentvalu.style.transform = `translateX(-${counter * 100}%)`
+            })
+        }
+
+        // Used for time duration================
+        setInterval(function () {
+            counter++;
+            if (counter == cards.length) {
+                counter=0;
+            }
+            myfun()
+        }, 4000)
+    </script>
+</body>
+
+</html>
